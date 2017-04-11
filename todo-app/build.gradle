@@ -1,0 +1,13 @@
+apply plugin: 'war'
+
+jar {
+    baseName = 'todo-app'
+    version = todoVersion
+}
+
+dependencies {
+    compile project(':common')
+    compile ('org.springframework.boot:spring-boot-starter-web')
+    compile ('org.springframework.boot:spring-boot-starter-test')
+}
+
