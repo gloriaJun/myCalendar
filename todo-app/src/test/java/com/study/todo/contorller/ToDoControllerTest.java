@@ -33,7 +33,14 @@ public class ToDoControllerTest {
 
     @Test
     public void testToDoList() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON_UTF8))
+        mockMvc.perform(MockMvcRequestBuilders.get("/todo").accept(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_UTF8));
+    }
+
+    @Test
+    public void saveToDoList() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.post("/todo").accept(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_UTF8));
     }
