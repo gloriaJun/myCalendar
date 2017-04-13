@@ -1,4 +1,4 @@
-package com.study.todo.core.domain;
+package study.todo.core.domain;
 
 /**
  * Created by gloria on 2017. 4. 12..

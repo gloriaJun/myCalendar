@@ -1,4 +1,4 @@
-package com.study.common.web.model;
+package study.common.web.model;
 
 public class ApiError {
     private ApiErrorType type;

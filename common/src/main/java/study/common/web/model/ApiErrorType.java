@@ -1,4 +1,4 @@
-package com.study.common.web.model;
+package study.common.web.model;
 
 /**
  * Created by gloria on 2017. 4. 13..

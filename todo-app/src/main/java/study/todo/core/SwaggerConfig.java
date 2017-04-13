@@ -1,4 +1,4 @@
-package com.study.todo.core;
+package study.todo.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

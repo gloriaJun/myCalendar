@@ -1,4 +1,4 @@
-package com.study.common.web.model;
+package study.common.web.model;
 
 public enum ApiErrorCode {
     UNKNOWN_SERVER_ERROR,

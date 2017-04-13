@@ -1,6 +1,6 @@
-package com.study.todo.contorller;
+package study.todo.web.contorller;
 
-import com.study.todo.ToDoApplication;
+import study.todo.ToDoApplication;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

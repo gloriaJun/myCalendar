@@ -1,7 +1,7 @@
-package com.study.todo.web.controller;
+package study.todo.web.controller;
 
-import com.study.todo.core.domain.ToDos;
-import com.study.common.web.model.ApiResult;
+import study.todo.core.domain.ToDos;
+import study.common.web.model.ApiResult;
 import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

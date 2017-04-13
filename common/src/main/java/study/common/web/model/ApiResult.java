@@ -1,8 +1,8 @@
-package com.study.common.web.model;
+package study.common.web.model;
 
 public class ApiResult<T> {
     private boolean success = true;
-    private String version = "v1";
+    private String version = "v0.1";
     private ApiError error;
     private T data;
 
