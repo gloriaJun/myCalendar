@@ -1,4 +1,4 @@
-package com.study.todo.model;
+package com.study.todo.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,8 +21,9 @@ public class SwaggerConfig {
                 .groupName("todo-api")
                 .select()
                 // 현재 RequestMapping으로 할당된 url 리스트
-                .apis(RequestHandlerSelectors.basePackage("com.study.todo.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.study.todo.web.controller"))
                 .paths(PathSelectors.any())
+
                 .build()
                 .apiInfo(apiInfo());
     }
