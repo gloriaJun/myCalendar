@@ -21,7 +21,7 @@ public class SwaggerConfig {
                 .groupName("todo-api")
                 .select()
                 // 현재 RequestMapping으로 할당된 url 리스트
-                .apis(RequestHandlerSelectors.basePackage("com.study.todo.web.controller"))
+                .apis(RequestHandlerSelectors.basePackage("study.todo.web.controller"))
                 .paths(PathSelectors.any())
 
                 .build()

@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Gradle : com.study.todo : todo-app-1.0-SNAPSHOT.war (exploded)">
+  <artifact type="exploded-war" name="Gradle : study.todo : todo-app-1.0-SNAPSHOT.war (exploded)">
     <output-path>$PROJECT_DIR$/todo-app/build/libs/exploded/todo-app-1.0-SNAPSHOT.war</output-path>
     <properties id="gradle-properties">
       <options external-project-path="$PROJECT_DIR$">
@@ -22,7 +22,7 @@
           <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.6" />
           <element id="library" level="project" name="Gradle: io.springfox:springfox-swagger2:2.6.1" />
           <element id="library" level="project" name="Gradle: io.springfox:springfox-swagger-ui:2.6.1" />
-          <element id="archive" name="com.study.todo-common-1.0-SNAPSHOT.jar">
+          <element id="archive" name="study.todo-common-1.0-SNAPSHOT.jar">
             <element id="module-output" name="common_main" />
             <element id="dir-copy" path="$PROJECT_DIR$/common/build/resources/main" />
           </element>

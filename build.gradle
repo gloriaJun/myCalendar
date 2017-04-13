@@ -14,7 +14,7 @@ buildscript {
 allprojects {
     task hello << { task -> println "I'm $task.project.name" }
 
-    group = 'com.study.todo'
+    group = 'study.todo'
     version = todoVersion
 
     apply plugin: 'eclipse'
