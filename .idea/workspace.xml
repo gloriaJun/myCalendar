@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ca26cb-c3de-4eb8-b799-463f6f200c81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/com/study/common/web/model/ApiError.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/com/study/common/web/model/ApiErrorCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/com/study/common/web/model/ApiErrorType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/src/main/java/com/study/common/web/model/ApiResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/web/controller/ToDoController.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo-app/build/classes/main/com/study/todo/controller/ToDoController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo-app/build/classes/main/com/study/todo/model/SwaggerConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo-app/build/classes/main/com/study/todo/model/ToDos.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/controller/ToDoController.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/model/SwaggerConfig.java" afterPath="$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/core/SwaggerConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/model/ToDos.java" afterPath="$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/core/domain/ToDos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo-app/build/classes/main/com/study/todo/ToDoApplication.class" afterPath="$PROJECT_DIR$/todo-app/build/classes/main/com/study/todo/ToDoApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/build/libs/common-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/build/libs/common-1.0-SNAPSHOT.jar.original" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/common/build/tmp/jar/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todo-app/build/classes/main/com/study/todo/ToDoApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/todo-app/build/tmp/war/MANIFEST.MF" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -156,7 +146,7 @@
         <entry file="file://$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/core/domain/ToDos.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -166,7 +156,7 @@
         <entry file="file://$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/web/controller/ToDoController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+              <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#634#641#0" expanded="true" />
@@ -1396,24 +1386,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="todo-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="todo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myCalendar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1925,12 +1897,12 @@
       <updated>1491999845566</updated>
       <workItem from="1491999848694" duration="9175000" />
       <workItem from="1492038726865" duration="2464000" />
-      <workItem from="1492087989916" duration="5742000" />
+      <workItem from="1492087989916" duration="5782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17381000" />
+    <option name="totallyTimeSpent" value="17421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="915" height="977" extended-state="0" />
@@ -2071,7 +2043,7 @@
     <entry file="file://$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/core/domain/ToDos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2111,7 +2083,7 @@
     <entry file="file://$PROJECT_DIR$/todo-app/src/main/java/com/study/todo/web/controller/ToDoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#634#641#0" expanded="true" />
