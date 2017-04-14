@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 @RequestMapping("/todo")
@@ -24,13 +22,10 @@ public class ToDoController {
 
     @ApiOperation(value = "Get ToDo List")
     @GetMapping
-    public HttpEntity<List<ToDo>> getToDoList() {
+    public ResponseEntity<List<ToDo>> getToDoList() {
         List<ToDo> toDoList = new ArrayList<ToDo>();
-
-        ToDo toDo = new ToDo(1, "aaa", false);
-        toDo.add(linkTo(methodOn(ToDoController.class).getToDoList()).withSelfRel());
-        toDoList.add(toDo);
-
+        toDoList.add(new ToDo(1, "aaa", false));
+        toDoList.add(new ToDo(2, "aaabbbb", true));
         return new ResponseEntity<List<ToDo>>(toDoList, HttpStatus.OK);
     }
 

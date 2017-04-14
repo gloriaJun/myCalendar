@@ -1,23 +1,21 @@
 package study.todo.core.domain;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.hateoas.ResourceSupport;
+import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-public class ToDo extends ResourceSupport{
-    long todoId;
+public class ToDo {
+    @Id
+    @GeneratedValue
+    long id;
     String text;
     boolean completed;
-
-    public ToDo() {}
-    public ToDo(long todoId, String text, boolean completed) {
-        this.todoId = todoId;
-        this.text = text;
-        this.completed = completed;
-    }
 }
