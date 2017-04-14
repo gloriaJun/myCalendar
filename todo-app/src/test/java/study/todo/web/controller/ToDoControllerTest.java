@@ -1,6 +1,7 @@
-package study.todo.web.contorller;
+package study.todo.web.controller;
 
 import study.todo.ToDoApplication;
+import study.todo.core.domain.ToDo;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +16,10 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -39,9 +44,15 @@ public class ToDoControllerTest {
     }
 
     @Test
-    public void saveToDoList() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.post("/todo").accept(MediaType.APPLICATION_JSON_UTF8))
+    public void testsaveToDo() throws Exception {
+        ObjectMapper objectMapper = new ObjectMapper();
+        mockMvc.perform(MockMvcRequestBuilders
+                    .post("/todo").accept(MediaType.APPLICATION_JSON_UTF8)
+                    .content(objectMapper.writeValueAsString(new ToDo(1, "go shopping", false)))
+                    )
                 .andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_UTF8));
+                .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$.data.text").exists())
+                .andDo(print());
     }
 }

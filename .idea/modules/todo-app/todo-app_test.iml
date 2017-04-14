@@ -18,6 +18,7 @@
     <orderEntry type="module" module-name="common_main" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:1.5.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-hateoas:1.5.2.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: io.swagger:swagger-annotations:1.5.10" level="project" />
     <orderEntry type="library" name="Gradle: io.swagger:swagger-models:1.5.10" level="project" />
     <orderEntry type="library" name="Gradle: io.springfox:springfox-spi:2.6.1" level="project" />
@@ -46,6 +47,7 @@
     <orderEntry type="library" name="Gradle: org.skyscreamer:jsonassert:1.4.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-core:4.3.7.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-test:4.3.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.hateoas:spring-hateoas:0.23.0.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
     <orderEntry type="library" name="Gradle: io.springfox:springfox-core:2.6.1" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-beans:4.3.7.RELEASE" level="project" />
