@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
@@ -16,6 +17,12 @@ public class ToDo {
     @Id
     @GeneratedValue
     long id;
+    @NotNull
     String text;
     boolean completed;
+
+    public ToDo(String text, boolean completed) {
+        this.text = text;
+        this.completed = completed;
+    }
 }
