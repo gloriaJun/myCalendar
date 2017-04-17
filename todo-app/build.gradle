@@ -1,17 +1,27 @@
-apply plugin: 'war'
+//apply plugin: 'war'
 
 jar {
     baseName = 'todo-app'
     version = todoVersion
 }
-
 dependencies {
     compile project(':common')
     compile ('org.springframework.boot:spring-boot-starter-web')
-    compile ('org.springframework.boot:spring-boot-starter-test')
-//    compile("org.springframework.boot:spring-boot-starter-hateoas")
     compile("org.springframework.data:spring-data-rest-webmvc");
+
+    // for db
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     runtime("com.h2database:h2")
+
+    // for test
+    testCompile ('org.springframework.boot:spring-boot-starter-test')
+
+
+//    compile("org.springframework.boot:spring-boot-starter-hateoas")
 }
+
+configurations {
+    all*.exclude module : 'spring-boot-starter-logging'
+}
+
 

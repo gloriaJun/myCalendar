@@ -1,3 +1,10 @@
+group = 'study.todo'
+version = todoVersion
+
+apply plugin: 'base'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
 // Gradle이 동작하기 위한 repositories와 dependencies를 정의
 buildscript {
     // 라이브러리 저장소 정의
@@ -13,12 +20,6 @@ buildscript {
 // 모든 모듈이 공통적으로 사용하기 위한 repositories와 dependencies를 정의
 allprojects {
     task hello << { task -> println "I'm $task.project.name" }
-
-    group = 'study.todo'
-    version = todoVersion
-
-    apply plugin: 'eclipse'
-    apply plugin: 'idea'
 }
 
 // 하위 모듈이 공통적으로 사용하기 위한 repositories와 dependencies를 정의
@@ -37,7 +38,6 @@ subprojects {
     dependencies {
         compile("ch.qos.logback:logback-classic:${logbackVersion}")
         compile("ch.qos.logback:logback-core:${logbackVersion}")
-        compile("org.slf4j:slf4j-api:${slf4jVersion}")
 
         // lombok
         compileOnly ("org.projectlombok:lombok:${lombokVersion}")

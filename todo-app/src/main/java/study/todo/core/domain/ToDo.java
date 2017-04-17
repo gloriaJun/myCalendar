@@ -17,7 +17,7 @@ public class ToDo {
     @Id
     @GeneratedValue
     long id;
-    @NotNull
+//    @NotNull
     String text;
     boolean completed;
 

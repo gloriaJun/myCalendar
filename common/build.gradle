@@ -3,8 +3,8 @@ jar {
     version = todoVersion
 }
 
-dependencies {
-
+bootRepackage {
+    enabled = false
 }
 
 
