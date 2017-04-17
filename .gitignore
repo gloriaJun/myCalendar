@@ -1,4 +1,12 @@
+# configuration for gradle
 .gradle
+
+# Intellij project files
 .idea
-build
 *.iml
+
+# generated files from build
+build/
+target/
+.jar
+.war

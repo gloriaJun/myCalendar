@@ -49,21 +49,13 @@ public class ToDoServiceTest {
     }
 
     @Test
-    public void testSaveNotInsertText() {
-        ToDo toDo = new ToDo();
-        toDo.setCompleted(true);
-
+    public void testFindById() {
+        // 데이타 저장 시에 대한 기대 값을 정의
         when(toDoRepository.save(any(ToDo.class))).thenReturn(toDo);
 
-    }
-
-    @Test
-    public void testUpdate() {
-        // 일단 데이타를 저장해두고..
-        toDoService.save(toDo);
-
-
-
+        ToDo resultToDo = toDoService.findOne(toDo.getId());
+        assertNotNull(resultToDo);
+        assertEquals(toDo, resultToDo);
     }
 
     @Test
