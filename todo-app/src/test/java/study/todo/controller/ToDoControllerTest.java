@@ -1,7 +1,8 @@
-package study.todo.web.controller;
+package study.todo.controller;
 
+import org.springframework.test.context.junit4.SpringRunner;
 import study.todo.ToDoApplication;
-import study.todo.core.domain.ToDo;
+import study.todo.domain.ToDo;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
@@ -22,9 +22,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = ToDoApplication.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest
+@ContextConfiguration(classes = ToDoApplication.class)
 public class ToDoControllerTest {
 
     private MockMvc mockMvc;

@@ -1,18 +1,17 @@
-package study.todo.web.controller;
+package study.todo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import study.todo.core.domain.ToDo;
+import study.todo.domain.ToDo;
 import study.common.web.model.ApiResult;
 import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
-import study.todo.core.service.ToDoService;
+import study.todo.service.ToDoService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -48,9 +47,8 @@ public class ToDoController {
             @ApiResponse(code = 400, message = "Invalid Id")
     })
     @PutMapping("/{id}")
-    public ApiResult<ToDo> updateToDo(@PathVariable long id) {
-        ToDo toDo = new ToDo();
-        return new ApiResult<>(toDo);
+    public ApiResult<ToDo> updateToDo(@PathVariable long id, ToDo toDo) {
+        return new ApiResult<>(toDoService.update(toDo));
     }
 
     @DeleteMapping("/{id}")

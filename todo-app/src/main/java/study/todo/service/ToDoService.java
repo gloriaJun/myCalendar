@@ -1,9 +1,11 @@
-package study.todo.core.service;
+package study.todo.service;
 
-import study.todo.core.domain.ToDo;
+import org.springframework.stereotype.Service;
+import study.todo.domain.ToDo;
 
 import java.util.List;
 
+@Service
 public interface ToDoService {
     public ToDo save(ToDo toDo);
     public ToDo update(ToDo toDo);

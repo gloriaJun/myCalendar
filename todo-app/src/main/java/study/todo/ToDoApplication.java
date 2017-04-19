@@ -6,8 +6,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import study.todo.core.domain.ToDo;
-import study.todo.core.repository.ToDoRepository;
+import study.todo.domain.ToDo;
+import study.todo.repository.ToDoRepository;
 
 
 @SpringBootApplication
@@ -16,6 +16,8 @@ public class ToDoApplication {
     private static final Logger logger = LoggerFactory.getLogger(ToDoApplication.class);
 
     public static void main(String[] args) {
+//        AbstractApplicationContext ctx = (AbstractApplicationContext)SpringApplication.run(ToDoApplication.class, args);
+//        ctx.registerShutdownHook();
         SpringApplication.run(ToDoApplication.class, args);
         logger.debug("Spring boot ToDoApplication Start~!!");
     }

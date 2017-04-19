@@ -1,10 +1,9 @@
-package study.todo.core.service.impl;
+package study.todo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import study.todo.core.domain.ToDo;
-import study.todo.core.repository.ToDoRepository;
-import study.todo.core.service.ToDoService;
+import study.todo.domain.ToDo;
+import study.todo.repository.ToDoRepository;
 
 import java.util.List;
 
@@ -20,7 +19,7 @@ public class ToDoServiceImpl implements ToDoService {
 
     @Override
     public ToDo update(ToDo toDo) {
-        return null;
+        return toDoRepository.save(toDo);
     }
 
     @Override
@@ -30,7 +29,7 @@ public class ToDoServiceImpl implements ToDoService {
 
     @Override
     public ToDo findOne(long id) {
-        return null;
+        return toDoRepository.findOne(id);
     }
 
     @Override
