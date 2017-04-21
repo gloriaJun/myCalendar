@@ -34,6 +34,6 @@ public class ToDoServiceImpl implements ToDoService {
 
     @Override
     public void delete(long id) {
-
+        toDoRepository.delete(id);
     }
 }

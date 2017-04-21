@@ -21,15 +21,15 @@ public class ToDoApplication {
         SpringApplication.run(ToDoApplication.class, args);
         logger.debug("Spring boot ToDoApplication Start~!!");
     }
-
-    // set init data for testing
-    @Bean
-    public CommandLineRunner demo(ToDoRepository repository) {
-        return (args) -> {
-            repository.save(new ToDo("take a nap", true));
-            repository.save(new ToDo("read a book", false));
-            repository.save(new ToDo("go shopping", false));
-            repository.save(new ToDo("wash a dishes", true));
-        };
-    }
+//
+//    // set init data for testing
+//    @Bean
+//    public CommandLineRunner demo(ToDoRepository repository) {
+//        return (args) -> {
+//            repository.save(new ToDo("take a nap", true));
+//            repository.save(new ToDo("read a book", false));
+//            repository.save(new ToDo("go shopping", false));
+//            repository.save(new ToDo("wash a dishes", true));
+//        };
+//    }
 }

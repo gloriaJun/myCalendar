@@ -1,0 +1,11 @@
+group 'study.todo'
+version '1.0-SNAPSHOT'
+
+jar {
+    baseName = 'rest-test'
+    version = todoVersion
+}
+dependencies {
+    testCompile ('junit:junit:4.10')
+    testCompile ('io.rest-assured:rest-assured:3.0.2')
+}
