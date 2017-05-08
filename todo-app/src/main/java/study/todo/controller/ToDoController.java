@@ -14,7 +14,9 @@ import study.todo.service.ToDoService;
 
 import java.util.List;
 
-
+/**
+ * 할 일 목록 관리를 위한 컨트롤러
+ */
 @RestController
 @RequestMapping("/todo")
 public class ToDoController {
@@ -28,32 +30,65 @@ public class ToDoController {
         this.toDoService = toDoService;
     }
 
+    /**
+     * 저장된 전체 리스트를 조회한다
+     * @return
+     */
     @ApiOperation(value = "Get ToDo List")
     @GetMapping
     public ResponseEntity<List<ToDo>> getToDoList() {
         return new ResponseEntity<List<ToDo>>(toDoService.findAll(), HttpStatus.OK);
     }
 
+    /**
+     * 새로운 할일을 등록한다
+     * @param toDo
+     * @return
+     */
+    @ApiOperation(value = "Save New ToDo")
     @PostMapping
     public HttpEntity<ToDo> saveToDo(ToDo toDo) {
-        return new ResponseEntity<ToDo>(toDoService.save(toDo), HttpStatus.OK);
+        return new ResponseEntity<>(toDoService.save(toDo), HttpStatus.OK);
     }
 
-    @ApiOperation(value = "Get ToDo List")
+    /**
+     * Id에 해당하는 할일을 수정한다
+     * @param id
+     * @param toDo
+     * @return
+     */
+    @ApiOperation(value = "Modify ToDo by ID")
     @ApiImplicitParams(
             @ApiImplicitParam(name = "id", value = "todo Id", required = true, paramType = "path")
     )
     @ApiResponses(value = {
-            @ApiResponse(code = 400, message = "Invalid Id")
+            @ApiResponse(code = 400, message = "Invalid ID")
     })
     @PutMapping("/{id}")
-    public ApiResult<ToDo> updateToDo(@PathVariable long id, ToDo toDo) {
-        return new ApiResult<>(toDoService.update(toDo));
+    public HttpEntity<ToDo> updateToDo(@PathVariable long id, ToDo toDo) {
+        return new ResponseEntity<>(toDoService.update(toDo), HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
-    public ApiResult deleteToDo(@PathVariable long id) {
+    /**
+     * Id에 해당하는 할일을 조회한다
+     * @param id
+     * @return
+     */
+    @ApiOperation(value = "Find ToDo by ID")
+    @GetMapping("/{id}")
+    public HttpEntity<ToDo> findToDobyId(@PathVariable long id) {
+        return new ResponseEntity<ToDo>(toDoService.findOne(id), HttpStatus.OK);
+    }
 
-        return new ApiResult();
+    /**
+     * Id에 해당하는 할일을 삭제한다
+     * @param id
+     * @return
+     */
+    @ApiOperation(value = "Delete ToDo by ID")
+    @DeleteMapping("/{id}")
+    public HttpEntity deleteToDo(@PathVariable long id) {
+        toDoService.delete(id);
+        return new ResponseEntity(HttpStatus.OK);
     }
 }

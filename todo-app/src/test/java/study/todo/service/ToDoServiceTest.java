@@ -80,6 +80,7 @@ public class ToDoServiceTest {
         //실제 테스트 하는 부분
         ToDo result = toDoService.save(toDo);
         verify(toDoRepository, times(1)).save(toDo);
+        assertThat(toDo, is(result));
     }
 
     @Test
@@ -95,14 +96,14 @@ public class ToDoServiceTest {
         verify(toDoRepository, times(1)).findAll();
         assertThat(resultList, is(notNullValue()));
         assertThat(resultList, hasSize(4));
+        verifyNoMoreInteractions(toDoRepository);
     }
 
     @Test
     public void testDelete() {
-//        when(toDoRepository.delete(toDo.getId())).thenReturn(null);
-//
-//        toDoService.delete(toDo.getId());
-////        assertNull(toDoService.findOne(toDo.getId()));
-//        verify(toDoRepository, times(1)).delete(toDo.getId());
+        doNothing().when(toDoRepository).delete(toDo.getId());
+
+        toDoService.delete(toDo.getId());
+        verify(toDoRepository, times(1)).delete(toDo.getId());
     }
 }

@@ -1,1 +1,16 @@
 logging.level.org.springframework: INFO
+
+# jap
+#spring.h2.console.enabled : true
+
+spring:
+  h2.console.enabled : true
+  jpa:
+    database: h2
+    show-sql: true
+
+#spring.jpa.show-sql: true
+#spring.jpa.database: h2
+
+
+

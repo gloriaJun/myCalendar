@@ -29,6 +29,7 @@ subprojects {
 
     sourceCompatibility = javaVersion
     targetCompatibility = javaVersion
+    compileJava.options.encoding = 'UTF-8'
 
     // 라이브러리 저장소 정의
     repositories {
@@ -45,6 +46,7 @@ subprojects {
         // swagger for api document
         compile ("io.springfox:springfox-swagger2:${swaggerVersion}")
         compile ("io.springfox:springfox-swagger-ui:${swaggerVersion}")
+        testCompile ("io.springfox:springfox-staticdocs:${swaggerVersion}")
     }
 }
 
